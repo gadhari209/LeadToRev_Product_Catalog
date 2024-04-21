@@ -66,20 +66,20 @@ You can seed the database with initial data using the provided SQL script in the
   - Status Code: 200 OK
   - Body: Array of Product objects (paged and sorted)
 ## c. Get Product by ID
-Endpoint: GET /products/{id}
-Request: Path variable: id (Long)
-Response:
-Status Code: 200 OK
-Body: Product object
-Status Code: 404 Not Found (if product with the given ID doesn't exist)
-d. Create Product
-Endpoint: POST /products
-Request:
-Body: Product object (JSON)
-Response:
-Status Code: 201 Created
-Body: Created Product object
-Status Code: 400 Bad Request (if request body is invalid)
+- Endpoint: GET /products/{id}
+- Request: Path variable: id (Long)
+- Response:
+  -  Status Code: 200 OK
+  -  Body: Product object
+  -  tatus Code: 404 Not Found (if product with the given ID doesn't exist)
+## d. Create Product
+- Endpoint: POST /products
+- Request:
+  - Body: Product object (JSON)
+- Response:
+  - Status Code: 201 Created
+  - Body: Created Product object
+  - Status Code: 400 Bad Request (if request body is invalid)
 e. Update Product
 Endpoint: PUT /products/{id}
 Request:
