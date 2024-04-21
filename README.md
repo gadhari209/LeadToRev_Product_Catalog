@@ -63,11 +63,65 @@ You can seed the database with initial data using the provided SQL script in the
 <a name="api-documentation"></a>
 # 1. API Endpoints Documentation:
 ## a. Get All Products
-- Endpoint: GET /products
-- Request: None
-- Response:
-  - Status Code: 200 OK
-  - Body: Array of Product objects
+#### Description:
+This API endpoint retrieves all products available in the system. It does not require any request parameters.
+#### Method: `GET`
+#### Request URL Format:
+#### Request Example:GET http://localhost:8080/products
+#### Response Format:
+
+- **Status Code:** 200 OK
+- **Body:** Array of Product objects
+
+Example response body:
+```json
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "description": "High-performance laptop",
+        "price": 999.99,
+        "categories": ["Electronics", "Computers"],
+        "attributes": ["High performance", "Lightweight"],
+        "inStock": true,
+        "quantity": 10,
+        "ratings": [
+            {
+                "id": 1,
+                "rating": 4.5,
+                "comment": "Great product"
+            },
+            {
+                "id": 2,
+                "rating": 5.0,
+                "comment": "Excellent laptop"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "description": "Latest smartphone model",
+        "price": 799.99,
+        "categories": ["Electronics", "Mobile Phones"],
+        "attributes": ["4G connectivity", "High-resolution camera"],
+        "inStock": true,
+        "quantity": 20,
+        "ratings": [
+            {
+                "id": 3,
+                "rating": 4.0,
+                "comment": "Good phone"
+            },
+            {
+                "id": 4,
+                "rating": 4.2,
+                "comment": "Nice design"
+            }
+        ]
+    }
+]
+```
 ## b. Get All Products (Paged and Sorted)
 - Endpoint: GET /products/paged
 - Request:
