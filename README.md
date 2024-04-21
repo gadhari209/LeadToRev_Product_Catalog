@@ -52,19 +52,19 @@ You can seed the database with initial data using the provided SQL script in the
 - Endpoint: GET /products
 - Request: None
 - Response:
-- Status Code: 200 OK
-- Body: Array of Product objects
+  - Status Code: 200 OK
+  - Body: Array of Product objects
 ## b. Get All Products (Paged and Sorted)
 - Endpoint: GET /products/paged
 - Request:
-- Query Parameters:
-- page (int, optional): Page number (default: 0)
-- size (int, optional): Page size (default: 10)
-- sortField (string, optional): Field to sort by (default: id)
-- sortOrder (string, optional): Sort order (asc or desc, default: asc)
+  - Query Parameters:
+  - page (int, optional): Page number (default: 0)
+  - size (int, optional): Page size (default: 10)
+  - sortField (string, optional): Field to sort by (default: id)
+  - sortOrder (string, optional): Sort order (asc or desc, default: asc)
 - Response:
-- Status Code: 200 OK
-- Body: Array of Product objects (paged and sorted)
+  - Status Code: 200 OK
+  - Body: Array of Product objects (paged and sorted)
 ## c. Get Product by ID
 Endpoint: GET /products/{id}
 Request: Path variable: id (Long)
