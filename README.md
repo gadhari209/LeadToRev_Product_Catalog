@@ -173,6 +173,7 @@ You can seed the database with initial data using the provided SQL script in the
 # c. Seeding Initial Data (Optional):
   -  You can create some sample data to seed your database. Here's an example SQL script to insert initial products:
 
+```sql
 -- Inserting products into the 'product' table
 INSERT INTO product (id, in_stock, quantity, description, name, price)
 VALUES
