@@ -165,7 +165,7 @@ This endpoint allows users to search for products based on optional filtering pa
         ]
     }
 ]
-
+```
 
 # 2. Product Entity Data Model Diagram:
 ### Product Entity
