@@ -120,6 +120,53 @@ You can seed the database with initial data using the provided SQL script in the
   -  Body: Updated Product object with the new rating
   - Status Code: 404 Not Found (if product with the given ID doesn't exist)
 
+## h. `/search` Endpoint
+
+#### Description:
+This endpoint allows users to search for products based on optional filtering parameters such as name, category, and attribute.
+
+#### Method: `GET`
+
+#### Parameters:
+- `name` (optional): The name of the product to search for.
+- `category` (optional): The category of the product to search for.
+- `attribute` (optional): The attribute of the product to search for.
+
+#### Request URL Format:
+#### Request Example:GET http://localhost:8080/search?name=Laptop&category=Electronics
+
+#### Response Format:
+- **Status Code:** `200 OK` - Successful request.
+- **Body:** JSON array containing the list of products matching the search criteria.
+
+#### Response Body Format:
+```json
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "description": "High-performance laptop",
+        "price": 999.99,
+        "categories": ["Electronics", "Computers"],
+        "attributes": ["High performance", "Lightweight"],
+        "inStock": true,
+        "quantity": 10,
+        "ratings": [
+            {
+                "id": 1,
+                "rating": 4.5,
+                "comment": "Great product"
+            },
+            {
+                "id": 2,
+                "rating": 5.0,
+                "comment": "Excellent laptop"
+            }
+        ]
+    }
+]
+
+
 # 2. Product Entity Data Model Diagram:
 ### Product Entity
 
