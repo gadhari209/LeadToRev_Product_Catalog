@@ -133,7 +133,7 @@ This endpoint allows users to search for products based on optional filtering pa
 - `attribute` (optional): The attribute of the product to search for.
 
 #### Request URL Format:
-#### Request Example:GET http://localhost:8080/search?name=Laptop&category=Electronics
+#### Request Example:GET http://localhost:8080/products/search?name=Laptop&category=Electronics
 
 #### Response Format:
 - **Status Code:** `200 OK` - Successful request.
