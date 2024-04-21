@@ -5,7 +5,7 @@ Before you begin, ensure you have met the following requirements:
 
 - Java Development Kit (JDK) 17 or higher installed on your machine.
 - MySQL database installed and running.
-- Your favorite IDE (IntelliJ IDEA, Eclipse, etc.) or a text editor.
+- Your favorite IDE (Eclipse, etc.) or a text editor.
 
 # Getting Started
 Follow these steps to set up and run the application locally:
@@ -21,11 +21,33 @@ Clone the repository to your local machine:
 <details>
 <summary>Click to view database configuration</summary>
 
-- spring.datasource.url=jdbc:mysql://localhost:3306/product_catalog  
+- spring.datasource.url=jdbc:mysql://localhost:3306/leadtorev1?sslMode=DISABLED
 - spring.datasource.username=root  
 - spring.datasource.password=password  
 - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
-- spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect  
+- spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+- spring.jpa.properties.hibernate.dialect.storage_engine=innodb
+- spring.jpa.hibernate.ddl-auto=update
 
 </details>
+
+# 3. Run the Application
+- Run the Spring Boot application using your eclipse
+- Run project as spring Boot App
+- The application should start on http://localhost:8080.
+
+# API Documentation
+
+The API endpoints and their expected request and response formats are documented in this section.
+
+<a name="api-documentation"></a>
+
+## API Endpoints
+
+- Endpoint 1: Description of endpoint 1.
+- Endpoint 2: Description of endpoint 2.
+- Endpoint 3: Description of endpoint 3.
+
+[API Documentation](#api-documentation)
+
 
