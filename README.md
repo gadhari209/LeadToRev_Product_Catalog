@@ -97,5 +97,11 @@ You can seed the database with initial data using the provided SQL script in the
   - Status Code: 404 Not Found (if product with the given ID doesn't exist)
 ## g. Rate Product
 - Endpoint: POST /products/{productId}/ratings
-- Request: Path variable: productId (Long)
-
+- Request: 
+   -  Path variable: productId (Long)
+   -  Body: Rating object (JSON)
+        --{  "userId": 123, "rating": 4, comment": "Great product!"}
+- Response:
+  - Status Code: 200 OK
+  -  Body: Updated Product object with the new rating
+  - Status Code: 404 Not Found (if product with the given ID doesn't exist)
