@@ -21,10 +21,11 @@ Clone the repository to your local machine:
 <details>
 <summary>Click to view database configuration</summary>
 
-spring.datasource.url=jdbc:mysql://localhost:3306/product_catalog
-spring.datasource.username=root
-spring.datasource.password=password
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+- spring.datasource.url=jdbc:mysql://localhost:3306/product_catalog  
+- spring.datasource.username=root  
+- spring.datasource.password=password  
+- spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
+- spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect  
 
 </details>
+
