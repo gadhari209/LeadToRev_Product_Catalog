@@ -70,4 +70,14 @@ public class ProductService {
         }
         return null;
     }
+     public List<Product> searchProducts(String name, String category, String attribute) {
+        // Check if any filter is provided
+        if (name != null || category != null || attribute != null) {
+            // Perform the search based on the provided filters
+            return productRepository.findByFilters(name, category, attribute);
+        } else {
+            // If no filters are provided, return all products
+            return productRepository.findAll();
+        }
+    }
 }
