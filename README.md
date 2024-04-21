@@ -124,13 +124,15 @@ Example response body:
 ```
 ## b. Get All Products (Paged and Sorted)
 - Endpoint: GET /products/paged
+#### Method: `GET`
 - Request:
+#### Request Example:GET http://localhost:8080/products/paged?page=0&size=10&sortField=id&sortOrder=asc
   - Query Parameters:
     - page (int, optional): Page number (default: 0)
     - size (int, optional): Page size (default: 10)
     - sortField (string, optional): Field to sort by (default: id)
     - sortOrder (string, optional): Sort order (asc or desc, default: asc)
-- Response:
+#### Response:
   - Status Code: 200 OK
   - Body: Array of Product objects (paged and sorted)
 ## c. Get Product by ID
