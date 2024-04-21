@@ -151,7 +151,7 @@ You can seed the database with initial data using the provided SQL script in the
 |----------------|------------------|-------------------------------------|
 | inStock        | boolean          | Availability Status                 |
 | quantity       | int              | Available Quantity                  |
-
+<a name="database-seeding"></a>
 # 3. Instructions for Database Setup and Seeding:
 
   # a. Setup:
