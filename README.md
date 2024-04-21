@@ -18,9 +18,10 @@ Clone the repository to your local machine:
 # 2. Configure the Database
 Create a MySQL database named LeadToRev (or any other desired name).
 Update the database configuration in src/main/resources/application.properties with your database credentials:
-<configuration>
+<details><summary>
 spring.datasource.url=jdbc:mysql://localhost:3306/product_catalog
 spring.datasource.username=root
 spring.datasource.password=password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect </configuration>
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect </summary>
+</details>
