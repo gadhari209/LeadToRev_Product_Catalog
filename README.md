@@ -157,6 +157,8 @@ You can seed the database with initial data using the provided SQL script in the
   # a. Setup:
      - Ensure you have MySQL installed and running.
     - Create a MySQL database named LeadToRev (or any other desired name).
+
+#  b. Configure Spring Boot Application Properties
 <details>
 <summary> b. Configure Spring Boot Application Properties:</summary>
 
@@ -166,7 +168,8 @@ You can seed the database with initial data using the provided SQL script in the
 - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
 - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 - spring.jpa.properties.hibernate.dialect.storage_engine=innodb
-- spring.jpa.hibernate.ddl-auto=update
+- spring.jpa.hibernate.ddl-auto=update</details>
+
 # c. Seeding Initial Data (Optional):
   -  You can create some sample data to seed your database. Here's an example SQL script to insert initial products:
 
