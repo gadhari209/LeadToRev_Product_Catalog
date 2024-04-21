@@ -40,14 +40,9 @@ Clone the repository to your local machine:
 
 The API endpoints and their expected request and response formats are documented in this section.
 
-<a name="api-documentation"></a>
-
-## API Endpoints
-
-- Endpoint 1: Description of endpoint 1.
-- Endpoint 2: Description of endpoint 2.
-- Endpoint 3: Description of endpoint 3.
-
 [API Documentation](#api-documentation)
+
+# Database Seeding
+You can seed the database with initial data using the provided SQL script in the [Instructions for Database Setup and Seeding](#database-seeding) section of the README file.
 
 
