@@ -80,23 +80,22 @@ You can seed the database with initial data using the provided SQL script in the
   - Status Code: 201 Created
   - Body: Created Product object
   - Status Code: 400 Bad Request (if request body is invalid)
-e. Update Product
-Endpoint: PUT /products/{id}
-Request:
-Path variable: id (Long)
-Body: Product object (JSON)
-Response:
-Status Code: 200 OK
-Body: Updated Product object
-Status Code: 404 Not Found (if product with the given ID doesn't exist)
-f. Delete Product
-Endpoint: DELETE /products/{id}
-Request: Path variable: id (Long)
-Response:
-Status Code: 204 No Content
-Status Code: 404 Not Found (if product with the given ID doesn't exist)
-g. Rate Product
-Endpoint: POST /products/{productId}/ratings
-Request:
-Path variable: productId (Long)
+## e. Update Product
+- Endpoint: PUT /products/{id}
+- Request:
+  - Path variable: id (Long)
+  - Body: Product object (JSON)
+- Response:
+  - Status Code: 200 OK
+  - Body: Updated Product object
+  - Status Code: 404 Not Found (if product with the given ID doesn't exist)
+## f. Delete Product
+- Endpoint: DELETE /products/{id}
+- Request: Path variable: id (Long)
+- Response:
+  - Status Code: 204 No Content
+  - Status Code: 404 Not Found (if product with the given ID doesn't exist)
+## g. Rate Product
+- Endpoint: POST /products/{productId}/ratings
+- Request: Path variable: productId (Long)
 
