@@ -46,7 +46,7 @@ The API endpoints and their expected request and response formats are documented
 You can seed the database with initial data using the provided SQL script in the [Instructions for Database Setup and Seeding](#database-seeding) section of the README file.
 
 
-
+<a name="api-documentation"></a>
 # 1. API Endpoints Documentation:
 ## a. Get All Products
 - Endpoint: GET /products
@@ -100,8 +100,41 @@ You can seed the database with initial data using the provided SQL script in the
 - Request: 
    -  Path variable: productId (Long)
    -  Body: Rating object (JSON)
-        --{  "userId": 123, "rating": 4, comment": "Great product!"}
+        - {  "userId": 123, "rating": 4, "comment": "Great product!"}
 - Response:
   - Status Code: 200 OK
   -  Body: Updated Product object with the new rating
   - Status Code: 404 Not Found (if product with the given ID doesn't exist)
+
+# 2. Product Entity Data Model Diagram:
+### Product Entity
+
+| Field          | Type             | Description                         |
+|----------------|------------------|-------------------------------------|
+| id             | Long (PK)        | Primary Key                         |
+| name           | String           | Product Name                        |
+| description    | String           | Product Description                 |
+| price          | double           | Product Price                       |
+| categories     | List<String>     | List of Categories for the Product  |
+| attributes     | List<String>     | List of Attributes for the Product  |
+| inStock        | boolean          | Availability Status                 |
+| quantity       | int              | Available Quantity                  |
+| ratings        | List<Rating>     | List of Ratings (OneToMany)         |
+
+### Rating Entity
+
+| Field          | Type             | Description                         |
+|----------------|------------------|-------------------------------------|
+| id             | Long (PK)        | Primary Key                         |
+| userId         | Long             | User ID                             |
+| rating         | int              | Rating (e.g., 1 to 5 stars)         |
+| comment        | String           | User Comment                        |
+| product        | Product          | Associated Product (ManyToOne)      |
+
+### Availability (Embeddable)
+
+| Field          | Type             | Description                         |
+|----------------|------------------|-------------------------------------|
+| inStock        | boolean          | Availability Status                 |
+| quantity       | int              | Available Quantity                  |
+
