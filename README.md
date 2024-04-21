@@ -36,15 +36,29 @@ Clone the repository to your local machine:
 - Run project as spring Boot App
 - The application should start on http://localhost:8080.
 
-# API Documentation
+# 4. API Documentation
 
 The API endpoints and their expected request and response formats are documented in this section.
 
 [API Documentation](#api-documentation)
 
-# Database Seeding
+# 5. Database Seeding
 You can seed the database with initial data using the provided SQL script in the [Instructions for Database Setup and Seeding](#database-seeding) section of the README file.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# supporting documents
 
 <a name="api-documentation"></a>
 # 1. API Endpoints Documentation:
@@ -138,3 +152,48 @@ You can seed the database with initial data using the provided SQL script in the
 | inStock        | boolean          | Availability Status                 |
 | quantity       | int              | Available Quantity                  |
 
+# 3. Instructions for Database Setup and Seeding:
+
+  # a. Setup:
+     - Ensure you have MySQL installed and running.
+    - Create a MySQL database named LeadToRev (or any other desired name).
+<details>
+<summary> b. Configure Spring Boot Application Properties:</summary>
+
+- spring.datasource.url=jdbc:mysql://localhost:3306/leadtorev1?sslMode=DISABLED
+- spring.datasource.username=root  
+- spring.datasource.password=password  
+- spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
+- spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+- spring.jpa.properties.hibernate.dialect.storage_engine=innodb
+- spring.jpa.hibernate.ddl-auto=update
+# c. Seeding Initial Data (Optional):
+  -  You can create some sample data to seed your database. Here's an example SQL script to insert initial products:
+
+-- Inserting products into the 'product' table
+INSERT INTO product (id, in_stock, quantity, description, name, price)
+VALUES
+  (1, true, 10, 'High-quality headphones', 'Headphones', 49.99),
+  (2, true, 20, 'Comfortable running shoes', 'Running Shoes', 79.99),
+  (3, true, 15, 'Sleek smartphone with advanced features', 'Smartphone', 699.99);
+
+-- Inserting product attributes into the 'product_attributes' table
+INSERT INTO product_attributes (product_id, attributes)
+VALUES
+  (1, 'Wireless, Noise-cancelling'),
+  (2, 'Breathable, Lightweight'),
+  (3, '5G, High-resolution camera');
+
+-- Inserting product categories into the 'product_categories' table
+INSERT INTO product_categories (product_id, categories)
+VALUES
+  (1, 'Electronics'),
+  (2, 'Footwear'),
+  (3, 'Electronics');
+
+-- Inserting ratings into the 'rating' table
+INSERT INTO rating (id, comment, rating, user_id, product_id)
+VALUES
+  (1, 'Great sound quality!', 5, 123, 1),
+  (2, 'Very comfortable for long runs.', 4, 456, 2),
+  (3, 'Fast performance and great camera.', 4, 789, 3);
